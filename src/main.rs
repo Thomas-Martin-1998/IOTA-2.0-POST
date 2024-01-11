@@ -14,6 +14,8 @@ async fn main() -> Result<()> {
 
     let data = args[3].replace('_', " ");
 
+    data.replace("\\", "");
+
     // Create a node client.
     let client = Client::builder().with_node(&node_url)?.finish().await?;
 
