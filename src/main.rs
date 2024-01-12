@@ -10,11 +10,9 @@ async fn main() -> Result<()> {
 
     let node_url: &str = &args[1];
 
-    let tag = &args[2].replace('_', " ");
+    let tag = &args[2];
 
-    let data = args[3].replace('_', " ");
-
-    data.replace("\\", "");
+    let data = &args[3].replace("\\", "\"");
 
     // Create a node client.
     let client = Client::builder().with_node(&node_url)?.finish().await?;
