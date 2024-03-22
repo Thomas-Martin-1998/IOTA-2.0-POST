@@ -8,3 +8,4 @@ edition = "2021"
 [dependencies]
 iota-sdk = { git = "https://github.com/iotaledger/iota-sdk", branch = "develop" }
 tokio = { version = "1.12.0", features = ["full"] }
+
